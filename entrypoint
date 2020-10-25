@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd /test
+
+latex --output-format=pdf ./text.tex
+
+ls . | grep pdf

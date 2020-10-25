@@ -1,0 +1,9 @@
+name: 'latex_to_pdf'
+description: 'LaTeX -> PDF'
+inputs:
+    input_path:
+      description: "Input path"
+      required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'

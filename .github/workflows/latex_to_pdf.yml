@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+    latex_to_pdf:
+      runs-on: ubuntu-latest
+      name: LaTeX -> PDF
+      container:
+        image: kamehamehdi/simple-alpine-latex
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: LaTeX -> PDF
+            shell: sh
+            run: latex --output-format=pdf ./test/text.tex
+

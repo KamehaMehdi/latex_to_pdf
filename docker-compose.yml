@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    entrypoint:
+      image: "latex_actions"
+      volumes:
+          - type: bind
+            source: ./entrypoint
+            target: /bin/entrypoint
+          - type: bind
+            source: ./test/
+            target: /test/
